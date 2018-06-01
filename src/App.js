@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import withRoot from './utils/withRoot';
+import './assets/App.css';
+// components
+import AppBar from './components/AppBar';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div style={{ height: '100vh', width: '100vw', backgroundColor: 'var(--grey)', color: '#ffffff' }}>
+        <AppBar />
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
@@ -18,4 +20,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRoot(App);
